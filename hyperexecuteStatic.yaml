@@ -87,6 +87,8 @@ uploadArtefacts:
          - src/test/
 
 mergeArtifacts: true
+failFast:
+ maxNumberOfTests: 2
 stripParentDirectory: true
 env:
   VERSION: 3.141.59
