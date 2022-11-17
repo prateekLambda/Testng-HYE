@@ -90,7 +90,7 @@ public class Demo {
             driver.findElement(By.id("title")).sendKeys("HyperExecute");
             driver.findElement(By.id("description")).click();
             driver.findElement(By.id("description")).sendKeys("This is Hyperexecute  for World fastest cloud execution");
-            driver.findElement(By.id("btn-submit")).click();
+            driver.findElement(By.id("btn-subm")).click();
             driver.findElement(By.linkText("JQuery Select dropdown")).click();
             for (int title = 0; title <= 5; title++) {
                 driver.getTitle();
