@@ -97,9 +97,9 @@ public class Uploadtest {
             driver.get("https://qa.boomi.com");
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++" + System.getenv("GROUP_NUMBER") + "======================================");
             driver.get("https://self-signed.badssl.com/");
-//            Thread.sleep(5000);
-//            Demo sampleTest = new Demo();
-//            sampleTest.sampleTest(driver);
+            Thread.sleep(5000);
+            Demo sampleTest = new Demo();
+            sampleTest.sampleTest(driver);
             //Thread.sleep(10000000);
 //            API test = new API();
 //            test.aws();
