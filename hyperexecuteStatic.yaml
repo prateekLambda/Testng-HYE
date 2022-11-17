@@ -76,14 +76,14 @@ cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
   - .m2
 #
-#uploadArtefacts:
-#    - name: Files
-#      path:
-#         - Files\
-#
-#    - name: DOWNLOADS
-#      path:
-#          - src/test/
+uploadArtefacts:
+   - name: m2
+     path:
+        - .m2/
+
+   - name: DOWNLOADS
+     path:
+         - src/test/
 
 mergeArtifacts: true
 stripParentDirectory: true
