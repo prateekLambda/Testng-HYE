@@ -125,7 +125,7 @@ public class Uploadtest {
     @AfterMethod
     public void teardown() {
         if (driver != null) {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + "passed");
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + "failed");
             driver.quit();
         }
     }
