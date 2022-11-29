@@ -78,9 +78,6 @@ cacheDirectories:
   - .m2
 #
 uploadArtefacts:
-   - name: m2
-     path:
-        - .m2/
 
    - name: DOWNLOADS
      path:
