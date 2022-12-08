@@ -1,4 +1,5 @@
 # Maven
+
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -10,8 +11,10 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: LambdatestResults@1
 
 - script: |
+           echo $LT_BUILD_NAME   
            curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
            
            hyperexecute.exe -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml --verbose
