@@ -11,7 +11,9 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task: LambdatestResults@1
+
+- task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
+  displayName: 'Lambdatest Results'
 
 - script: |
            echo $LT_BUILD_NAME   
