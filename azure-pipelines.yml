@@ -13,7 +13,7 @@ pool:
 steps:
 
 - script: |
-           echo $LT_BUILD_NAME   
+           echo $(LT_BUILD_NAME)   
            curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
            
            hyperexecute.exe -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml --verbose
