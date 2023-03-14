@@ -8,15 +8,16 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-18.04
 
 steps:
 
 - script: |
            echo %LT_BUILD_NAME%   
-           curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
+           curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+           chmod u+x hyperexecute
            
-           hyperexecute.exe -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml
+           ./hyperexecute -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml
            
 - script: |
            echo "Test" 
