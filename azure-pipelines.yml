@@ -14,7 +14,7 @@ steps:
 
 - script: |
            echo %LT_BUILD_NAME%   
-           curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+           wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
            chmod u+x hyperexecute
            
            ./hyperexecute -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml --vars "Test=2"
