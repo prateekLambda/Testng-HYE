@@ -19,7 +19,6 @@ steps:
            
            ./hyperexecute -u prateek.delguy -k 9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE -i hyperexecuteStatic.yaml --vars "Test=2"
            current_folder=$(basename `pwd`)
-           cd ..
            mv $current_folder systemtests
            
            
