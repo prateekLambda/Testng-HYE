@@ -21,7 +21,7 @@ steps:
            current_folder=$(basename `pwd`)
            cd ..
            mv $current_folder systemtests
-           cd systemtests
+           
            
 - script: |
            echo "Test" 
