@@ -16,7 +16,7 @@ steps:
     targetType: inline
     script: |
               set HTTP_PROXY=http://50.174.7.153:80   
-              curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
+              wget https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
               ./hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
            
            
