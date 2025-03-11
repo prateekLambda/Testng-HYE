@@ -11,10 +11,10 @@ pool:
   vmImage: windows-latest
 
 steps:
-
+- task: PowerShell@2
 - script: |
-           set HTTP_PROXY=http://47.251.122.81:8888   
-           wget https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
+           set HTTP_PROXY=http://35.178.104.4:3128   
+           curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
           
            
            ./hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
