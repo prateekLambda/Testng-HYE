@@ -17,7 +17,7 @@ steps:
     script: |
               Invoke-WebRequest https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
               dir 
-              set HTTP_PROXY=http://127.0.0.1:80 
+              set HTTPS_PROXY=http://127.0.0.1:80 
               ./hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
            
            
