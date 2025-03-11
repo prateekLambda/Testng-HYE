@@ -17,7 +17,8 @@ steps:
     script: |
               set HTTP_PROXY=http://50.174.7.153:80   
               wget https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
-              ./hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
+              dir 
+              .\hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
            
            
            
