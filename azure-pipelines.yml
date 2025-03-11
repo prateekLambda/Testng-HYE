@@ -8,18 +8,18 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-18.04
+  vmImage: windows-latest
 
 steps:
 
 - script: |
-           echo %LT_BUILD_NAME%   
-           wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
-           chmod u+x hyperexecute
+           set HTTP_PROXY=http://47.251.122.81:8888   
+           wget https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe
+          
            
-           ./hyperexecute -u prateek.delguy -k $LT_ACCESS_KEY -i hyperexecuteStatic.yaml --vars "Test=2"
-           current_folder=$(basename `pwd`)
-           mv $current_folder systemtests
+           ./hyperexecute.exe -u ${env:LT_USERNAME} -k ${env:LT_ACCESS_KEY} -i hyperexecuteStatic.yaml --vars "Test=2"
+           
+           
            
            
 - script: |
